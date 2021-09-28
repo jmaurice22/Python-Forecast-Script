@@ -1,5 +1,7 @@
 # Imports
-import requests, json, math
+import math
+
+import requests, math
 
 degree_sign = u"\N{DEGREE SIGN}"
 
@@ -31,8 +33,10 @@ if response.status_code == 200:
     print('Feels Like: ' + str(round(feels_like)) + "" + degree_sign + "F")
     print('High today of: ' + str(round(temp_max)) + "" + degree_sign + "F")
     print('Pressure: ' + str(round(pressure)) + " inHG")
-    print('Humidity: ' + str(round(humidity)) + "%")
+    print('Humidity: ' + str(round(humidity)) + " %")
 
 else:
     #ERROR HANDLING
     print('Error: Weather Data Not Found 😕')
+    print('Retry Search')
+    
